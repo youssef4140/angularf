@@ -1,0 +1,7 @@
+<div class="search">
+    <!-- <input class="search-input" (input)="updateSearchText($event)" [value]="searchText"> -->
+    <input class="search-input" [(ngModel)]="searchText">
+
+    <button class="btn btn-search">Search</button>
+</div>
+<div class="search-results"><p *ngIf="searchText"><strong>Search result for:</strong> {{searchText}} </p></div>

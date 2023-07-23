@@ -1,0 +1,13 @@
+<div>
+    <div class="product-card">
+        <img [src]="product.image"><br>
+        <div style="width:100%">
+            <h1>{{product.title}}</h1>
+            <p class="price">${{product.price}}</p>
+            <!-- <p class="description">{{product.description}}</p> -->
+            <p class="rating">Rating:{{product.rating.rate}}<span *ngIf="product.rating.rate > 4.3"> best seller</span></p>
+            <p [ngStyle]="{fontWeight: 'bold', color:product.inStock? 'green':'red'}">{{product.inStock ? 'Available in stock':'Not available in stock'}}</p>
+            <button [disabled]="product.inStock? true:false" [ngClass]="product.inStock? 'button-enabled':'button-disabled'">Add to Cart</button>
+        </div>
+    </div>
+</div>
